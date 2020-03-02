@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\etrai\\Repos\\Rock Paper Scissors\\RPS Game\\RPS Game.csproj",
+      "projectUniqueName": "D:\\etrai\\Repos\\Rock Paper Scissors\\Rock-Paper-Scissors\\RPS Game\\RPS Game.csproj",
       "projectName": "RPS Game",
-      "projectPath": "D:\\etrai\\Repos\\Rock Paper Scissors\\RPS Game\\RPS Game.csproj",
+      "projectPath": "D:\\etrai\\Repos\\Rock Paper Scissors\\Rock-Paper-Scissors\\RPS Game\\RPS Game.csproj",
       "packagesPath": "C:\\Users\\etrai\\.nuget\\packages\\",
-      "outputPath": "D:\\etrai\\Repos\\Rock Paper Scissors\\RPS Game\\obj\\",
+      "outputPath": "D:\\etrai\\Repos\\Rock Paper Scissors\\Rock-Paper-Scissors\\RPS Game\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
