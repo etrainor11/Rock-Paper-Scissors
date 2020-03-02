@@ -1,0 +1,11 @@
+D:\etrai\Repos\Rock Paper Scissors\RPS Game\bin\Debug\netcoreapp3.1\RPS Game.exe
+D:\etrai\Repos\Rock Paper Scissors\RPS Game\bin\Debug\netcoreapp3.1\RPS Game.deps.json
+D:\etrai\Repos\Rock Paper Scissors\RPS Game\bin\Debug\netcoreapp3.1\RPS Game.runtimeconfig.json
+D:\etrai\Repos\Rock Paper Scissors\RPS Game\bin\Debug\netcoreapp3.1\RPS Game.runtimeconfig.dev.json
+D:\etrai\Repos\Rock Paper Scissors\RPS Game\bin\Debug\netcoreapp3.1\RPS Game.dll
+D:\etrai\Repos\Rock Paper Scissors\RPS Game\bin\Debug\netcoreapp3.1\RPS Game.pdb
+D:\etrai\Repos\Rock Paper Scissors\RPS Game\obj\Debug\netcoreapp3.1\RPS Game.csprojAssemblyReference.cache
+D:\etrai\Repos\Rock Paper Scissors\RPS Game\obj\Debug\netcoreapp3.1\RPS Game.AssemblyInfoInputs.cache
+D:\etrai\Repos\Rock Paper Scissors\RPS Game\obj\Debug\netcoreapp3.1\RPS Game.AssemblyInfo.cs
+D:\etrai\Repos\Rock Paper Scissors\RPS Game\obj\Debug\netcoreapp3.1\RPS Game.dll
+D:\etrai\Repos\Rock Paper Scissors\RPS Game\obj\Debug\netcoreapp3.1\RPS Game.pdb

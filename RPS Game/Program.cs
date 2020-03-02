@@ -1,0 +1,37 @@
+﻿using System;
+
+namespace RPS_Game
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Game game = new Game();
+            game.GameNumbers = Introduction();
+            game.PlayGame();
+        }
+
+        static int Introduction()
+        {
+            Console.WriteLine("Best of how many games?");
+
+            string gamesString;
+
+            do
+            {
+                Console.WriteLine("1, 3, or 5?");
+                gamesString = Console.ReadLine();
+            }
+            while (gamesString != "1" && gamesString != "3" && gamesString != "5");
+
+
+            int gamesNumber = Int32.Parse(gamesString);
+            Console.WriteLine($"You selected {gamesNumber} games.");
+
+            return gamesNumber;
+        }
+
+
+    }
+}
