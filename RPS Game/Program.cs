@@ -7,15 +7,17 @@ namespace RPS_Game
         private static void Main(string[] args)
         {
             Game game = new Game();
-            bool gameOver = game.CheckGame();
+            //bool gameOver = game.CheckGame();
             game.GameNumbers = Introduction();
             do
             {
                 game.PlayGame();
-            } while (gameOver == false);
-            
-            
+            } while (game.GameOver == false);
+
+
             //game is now over, display total score.
+            Console.WriteLine($"\nGame Finished! Final Score:");
+            game.DisplayResults();
 
         }
 

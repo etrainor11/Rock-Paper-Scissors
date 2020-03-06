@@ -15,7 +15,7 @@ namespace RPS_Game
         Rock_Paper_Scissors.Objs playerObj;
         Rock_Paper_Scissors.Objs comObj;
 
-
+        public bool GameOver { get; set; }
         public void PlayGame()
         {
             StartGame();
@@ -23,6 +23,7 @@ namespace RPS_Game
             ComputerPick();
             CheckWinner(playerObj, comObj);
             DisplayResults();
+            GameOver = CheckGame();
         }
 
         void StartGame()
@@ -51,7 +52,7 @@ namespace RPS_Game
             int l = (Enum.GetNames(typeof(Rock_Paper_Scissors.Objs)).Length) - 1;
             var r = new Random();
             int ran = r.Next(0, l + 1);
-            string answer = Enum.GetName(typeof(Rock_Paper_Scissors.Objs), 0);
+            string answer = Enum.GetName(typeof(Rock_Paper_Scissors.Objs), ran);
             Console.WriteLine($"Computer has picked {answer.ToLower()} \n");
             comObj = DeclareChoice(answer);
         }
@@ -62,7 +63,8 @@ namespace RPS_Game
             double total = Convert.ToDouble(GameNumbers);
             double current = Convert.ToDouble(CurrentGame);
 
-            if ((total / 2) < current)
+            //If the player or computer have more than half the matches won they mathmatically win.
+            if ((total / 2) < PlayerWinsNumber || (total / 2) < CompWinsNumber)
             {
                 gameOver = true;
             }
@@ -217,10 +219,9 @@ namespace RPS_Game
             }
 
         }
-
         public void DisplayResults()
         {
-            Console.WriteLine($"\n Player Score: {PlayerWinsNumber}     Computer Score: {CompWinsNumber}");
+            Console.WriteLine($"\nPlayer Score: {PlayerWinsNumber}     Computer Score: {CompWinsNumber}");
         }
     }
 }
