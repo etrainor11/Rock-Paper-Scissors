@@ -15,13 +15,15 @@ namespace RPS_Game
         Rock_Paper_Scissors.Objs playerObj;
         Rock_Paper_Scissors.Objs comObj;
 
-
+        public bool GameOver { get; set; }
         public void PlayGame()
         {
             StartGame();
             PlayerPick();
             ComputerPick();
             CheckWinner(playerObj, comObj);
+            DisplayResults();
+            GameOver = CheckGame();
         }
 
         void StartGame()
@@ -40,7 +42,7 @@ namespace RPS_Game
                 answer = a.ToLower();
             } while (answer != "rock" && answer != "paper" && answer != "scissors");
 
-            Console.WriteLine($"You selected {answer}");
+            Console.WriteLine($"You selected {answer} \n");
 
             playerObj = DeclareChoice(answer);
         }
@@ -51,17 +53,18 @@ namespace RPS_Game
             var r = new Random();
             int ran = r.Next(0, l + 1);
             string answer = Enum.GetName(typeof(Rock_Paper_Scissors.Objs), ran);
-            Console.WriteLine($"Computer has picked {answer.ToLower()}");
+            Console.WriteLine($"Computer has picked {answer.ToLower()} \n");
             comObj = DeclareChoice(answer);
         }
 
-        bool CheckGame()
+        public bool CheckGame()
         {
             bool gameOver;
             double total = Convert.ToDouble(GameNumbers);
             double current = Convert.ToDouble(CurrentGame);
 
-            if ((total / 2) < current)
+            //If the player or computer have more than half the matches won they mathmatically win.
+            if ((total / 2) < PlayerWinsNumber || (total / 2) < CompWinsNumber)
             {
                 gameOver = true;
             }
@@ -100,7 +103,17 @@ namespace RPS_Game
             if (player == computer)
             {
                 //draw - round needs replayed
-                DeclareResult(player, computer);
+                do
+                {
+                    DeclareResult(player, computer);
+                    PlayerPick();
+                    ComputerPick();
+
+                    //update arguements
+                    player = playerObj;
+                    computer = comObj;
+                } while (player == computer);
+                
             }
 
             switch (player)
@@ -148,7 +161,7 @@ namespace RPS_Game
         {
             if (player == com)
             {
-                Console.WriteLine($"Draw - both picked {player}!");
+                Console.WriteLine($"Draw - both picked {player}! \n");
             }
 
             switch (player)
@@ -205,6 +218,10 @@ namespace RPS_Game
                 CompWinsNumber++;
             }
 
+        }
+        public void DisplayResults()
+        {
+            Console.WriteLine($"\nPlayer Score: {PlayerWinsNumber}     Computer Score: {CompWinsNumber}");
         }
     }
 }

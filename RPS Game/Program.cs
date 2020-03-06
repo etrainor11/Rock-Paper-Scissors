@@ -4,12 +4,21 @@ namespace RPS_Game
 {
     class Program
     {
-
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Game game = new Game();
+            //bool gameOver = game.CheckGame();
             game.GameNumbers = Introduction();
-            game.PlayGame();
+            do
+            {
+                game.PlayGame();
+            } while (game.GameOver == false);
+
+
+            //game is now over, display total score.
+            Console.WriteLine($"\nGame Finished! Final Score:");
+            game.DisplayResults();
+
         }
 
         static int Introduction()
