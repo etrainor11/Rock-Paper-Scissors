@@ -29,7 +29,7 @@ namespace RPS_Game
         void StartGame()
         {
             CurrentGame++;
-            Console.WriteLine($"Game number {CurrentGame}: \n");
+            Console.WriteLine($"\nGame number {CurrentGame}: \n");
         }
 
         void PlayerPick()
